@@ -1,4 +1,3 @@
-#from cmath import pi
 import math
 
 straal = float(input("Straal? "))
