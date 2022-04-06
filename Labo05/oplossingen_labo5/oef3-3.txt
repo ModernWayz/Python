@@ -1,0 +1,4 @@
+Bestandstitel: oef3-3.txt
+Een regel uit dit bestand
+En nog een regel
+Over en sluiten
