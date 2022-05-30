@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Velo Antwerpen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Velo Antwerpen</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="stations.html">Stations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gebruikers.html">Gebruikers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="logs.html">Logs</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Logs</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Gebruiker/Transporteur</th>
+          <th>Actie</th>
+          <th>Velo</th>
+          <th>Aantal</th>
+          <th>Station ID</th>
+          <th>Tijdstip</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for log in logs %}
+        {% if(log.gebruiker != None) %}
+        <tr>
+        {% else %}
+        <tr class="table-info">
+        {% endif %}
+          {% if(log.gebruiker != None) %}
+          <td>{{log.gebruiker.naam}} {{log.gebruiker.familieNaam}}</td>
+          {% else %}
+          <td>Transporteur: {{log.transporteur.naam}} {{log.transporteur.familieNaam}}</td>
+          {% endif %}
+          <td style="text-transform: capitalize;">{{log.action}}</td>
+          {% if(log.velo != None) %}
+          <td>#{{log.velo.id}}</td>
+          {% else %}
+          <td>Meerdere</td>
+          {% endif %}
+          <td>{{log.amount}}</td>
+          <td>#{{log.station.objectId}}</td>
+          <td>{{log.logtime}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+<body>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
