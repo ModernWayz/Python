@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+    {{ pagina }}
+
+    <h3>Tags</h3>
+    <ul>
+    {% for tag in data["tags"] %}
+    <li>{{ tag}}</li>
+    {% endfor%}
+    </ul>
+
+    <h3>Category</h3>
+    <ul>
+    {% for category in data["categories"] %}
+    <li>{{ category}}</li>
+    {% endfor%}
+    </ul>
+
+{% endblock %}

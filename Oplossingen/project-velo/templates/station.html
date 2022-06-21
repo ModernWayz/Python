@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1><a href="../_site/">Home</a> > {{titel}}</h1>
+    <h2>Slots</h2>
+    <ul class="slots">
+        {{ slots }}
+    </ul>
+    <h2>Logs</h2>
+    <ul class="logs">
+        {{ logs }}
+    </ul>
+{% endblock %}

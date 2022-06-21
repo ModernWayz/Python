@@ -1,0 +1,55 @@
+body {
+    margin: 2rem;
+    font-family: "helvetica neue", "arial", "sans-serif";
+    font-size: 1.1rem;
+}
+
+h1, h2 {
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin-bottom: 1.4rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+nav ul {
+    display: flex;
+    margin-bottom: 0rem;
+}
+
+nav ul li {
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: red;
+}
+
+p {
+    margin-bottom: 1.4rem;
+    line-height: 1.6rem;
+}
+
+header, main, footer {
+    border: .1rem solid lightgrey;
+    margin-bottom: 1.4rem;
+    padding: 1.4rem;
+}
+
+h2 a {
+    color: green;
+}
+
+h3 {
+    margin-bottom: 1.4rem;
+}
+
+main li {
+    display: inline-block;
+}
+
+main ul {
+    margin-bottom: 1.4rem;
+}

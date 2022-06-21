@@ -1,0 +1,8 @@
+<h1>Labo 7: mijn Statische Site Generator</h1>
+<nav>
+            <ul>
+                {% for element in navigatie %}
+                <li><a href="{{element[1]}}">{{element[0]}}</a></li>
+                {% endfor %}
+            </ul>
+</nav>

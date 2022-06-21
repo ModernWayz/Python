@@ -1,0 +1,3 @@
+Naam: Seven-Up, Temperatuur: 20
+Naam: Minute Maid, Temperatuur: 16
+Naam: Koffie, Temperatuur: 40

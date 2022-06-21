@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    {{ pagina }}
+    {% for post in posts %}
+    <article>
+        <h2><a href="{{ post[1]}}">{{ post[2]}}</a></h2>
+        <h3>Gepost op {{ post[0]}}</h3>
+        <p>{{ post[3]}}</p>
+    </article>
+        
+    {% endfor %}
+{% endblock %}
+
