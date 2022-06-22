@@ -1,6 +1,0 @@
-def mijn_functie():
-    '''Deze functie heeft een docstring'''
-    pass
-
-def mijn_andere_functie():
-    pass
